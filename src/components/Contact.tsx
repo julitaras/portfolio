@@ -16,7 +16,12 @@ export default function Contact({ lang }: Props) {
       <div className="contact-content">
         <p className="contact-description">{t.description}</p>
         <div className="contact-links">
-          <a href="mailto:dbtyamor@gmail.com" className="contact-button contact-button-primary">
+          <a
+            href="https://www.linkedin.com/in/julieta-taras/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="contact-button contact-button-primary"
+          >
             {t.email}
           </a>
           <a

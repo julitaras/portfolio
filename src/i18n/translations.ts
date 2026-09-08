@@ -84,7 +84,7 @@ export const translations = {
     contact: {
       title: 'contacto',
       subtitle: '¿hablamos?',
-      description: 'Podés escribirme por mail o encontrarme en GitHub.',
+      description: 'Podés escribirme por LinkedIn o encontrarme en GitHub.',
       email: 'escribime',
       github: 'mi github',
     },
@@ -176,8 +176,8 @@ export const translations = {
     contact: {
       title: 'contact',
       subtitle: "let's talk",
-      description: 'You can reach me by email or find me on GitHub.',
-      email: 'send me an email',
+      description: 'You can reach me on LinkedIn or find me on GitHub.',
+      email: 'message me',
       github: 'my github',
     },
     footer: {
