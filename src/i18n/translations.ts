@@ -19,7 +19,6 @@ export const translations = {
     projects: {
       title: 'proyectos',
       subtitle: 'algunas cosas que construí',
-      private: 'privado',
       viewCode: 'ver código',
       items: [
         {
@@ -111,7 +110,6 @@ export const translations = {
     projects: {
       title: 'projects',
       subtitle: 'some things I built',
-      private: 'private',
       viewCode: 'view code',
       items: [
         {

@@ -25,34 +25,33 @@ export default function Projects({ lang }: Props) {
         <p className="section-subtitle">{t.subtitle}</p>
       </div>
       <div className="projects-grid">
-        {t.items.map((project) => {
-          const color = langColors[project.lang] ?? '#b78df7'
-          return (
-            <div key={project.id} className="project-card">
-              <div className="project-card-top">
-                <div className="project-lang-dot" style={{ background: color }} />
-                <span className="project-lang" style={{ color }}>
-                  {project.lang}
-                </span>
-                {'private' in project && project.private && (
-                  <span className="project-private">{t.private}</span>
+        {t.items
+          .filter((project) => !('private' in project && project.private))
+          .map((project) => {
+            const color = langColors[project.lang] ?? '#b78df7'
+            return (
+              <div key={project.id} className="project-card">
+                <div className="project-card-top">
+                  <div className="project-lang-dot" style={{ background: color }} />
+                  <span className="project-lang" style={{ color }}>
+                    {project.lang}
+                  </span>
+                </div>
+                <h3 className="project-name">{project.name}</h3>
+                <p className="project-description">{project.description}</p>
+                {'url' in project && project.url && (
+                  <a
+                    href={project.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    {t.viewCode} →
+                  </a>
                 )}
               </div>
-              <h3 className="project-name">{project.name}</h3>
-              <p className="project-description">{project.description}</p>
-              {'url' in project && project.url && !('private' in project && project.private) && (
-                <a
-                  href={project.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="project-link"
-                >
-                  {t.viewCode} →
-                </a>
-              )}
-            </div>
-          )
-        })}
+            )
+          })}
       </div>
     </section>
   )
