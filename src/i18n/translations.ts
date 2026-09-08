@@ -27,7 +27,6 @@ export const translations = {
           name: 'InsuTrack',
           description:
             'App personal para gestionar insumos de diabetes. Seguimiento de stock, fechas de vencimiento y alertas.',
-          descriptionEn: '',
           lang: 'TypeScript · React',
           private: true,
         },
